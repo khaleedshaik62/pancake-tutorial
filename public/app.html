@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Pancake Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-brand">Pancake Assistant</div>
+
+      <button class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <nav class="nav-links">
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#recipe">Recipe</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <div class="language-selector">
+            <div id="google_translate_element"></div>
+          </div>
+          <div id="user-status">
+            <button onclick="logout()" class="logout-btn">Logout</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="cooking-assistant">
+      <main class="main-content">
+        <aside class="left-column">
+          <div class="card ingredients-card">
+            <h4>Ingredients for batter</h4>
+            <ul>
+              <li><span>Rice</span><span>- 1 cup</span></li>
+              <li><span>Black Gram</span><span>- 1/4 cup</span></li>
+              <li><span>Salt</span><span>- To taste</span></li>
+              <li><span>Water</span><span>- As needed</span></li>
+              <li><span>Fenugreek seeds</span><span>- 1/4 tsp</span></li>
+              <li><span>Rice Flakes</span><span>- 1 tbsp</span></li>
+            </ul>
+          </div>
+          <div class="card ingredients-card">
+            <h4>Ingredients for Chutney</h4>
+            <ul>
+              <li><span>Fresh grated coconut</span><span>- 1/2 cup</span></li>
+              <li><span>Roasted peanuts</span><span>- 1/4 cup</span></li>
+              <li><span>Green chillies</span><span>- 1-2</span></li>
+              <li><span>Salt</span><span>- To taste</span></li>
+              <li><span>Ginger</span><span>- ½ inch pieces</span></li>
+              <li><span>Water</span><span>- As needed</span></li>
+            </ul>
+          </div>
+          <div class="card ingredients-card">
+            <h4>Ingredients for Tadka and Cooking of Dosa</h4>
+            <ul>
+              <li><span>Tadka</span></li>
+              <li><span>Oil</span><span>½ tsp</span></li>
+              <li><span>Mustard seeds</span><span>¼ tsp</span></li>
+              <li><span>Urad dal</span><span>½ tsp</span></li>
+              <li><span>Dry red chili</span><span>1</span></li>
+              <li><span>Curry leaves</span><span>3-4 leaves</span></li>
+              <li><span>Cooking</span></li>
+              <li><span>Cooking oil</span><span>1 tsp</span></li>
+              <li>
+                <span>Pre-mixed veggies (optional for savory pancakes)</span
+                ><span>As desired</span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="center-column">
+          <div class="step-container" id="step-1-container">
+            <h3>Part-I Batter prep</h3>
+            <div class="step" id="step-1">
+              <div class="instruction-box">
+                <p>
+                  <strong>Soak Ingredients:</strong><br />Wash and soak rice,
+                  urad dal, fenugreek seeds, and poha in water for 4–6 hours.
+                </p>
+              </div>
+              <div class="instruction-box">
+                <p>
+                  <strong>Grind Batter:</strong><br />Drain soaked ingredients.
+                  Grind them into a smooth paste using water as needed for a
+                  thick pourable consistency.
+                </p>
+              </div>
+              <div class="instruction-box">
+                <p>
+                  <strong>Fermentation:</strong><br />Leave the batter in a warm
+                  place for 6–8 hours or overnight until slightly airy.
+                </p>
+              </div>
+              <div class="instruction-box">
+                <p>
+                  <strong>Add Salt & Mix:</strong><br />Before cooking, add salt
+                  to taste and mix well.
+                </p>
+              </div>
+              <img
+                src="Batter.jpg"
+                class="step-image"
+                alt="A bowl of freshly prepared pancake batter"
+              />
+            </div>
+          </div>
+
+          <div class="step-container hidden" id="step-2-container">
+            <h3>Part-II Chutney prep</h3>
+            <div class="step" id="step-2">
+              <div class="instruction-box">
+                <p>
+                  <strong>Grind Chutney:</strong><br />Add coconut, roasted
+                  peanuts, green chillies, ginger, salt, and water to a blender.
+                  Grind to a smooth or slightly coarse paste depending on
+                  preference.
+                </p>
+              </div>
+              <div class="instruction-box">
+                <p>
+                  <strong>Prepare Tempering (Tadka):</strong><br />Heat oil in a
+                  small pan.<br />Add mustard seeds → urad dal → dry red chili →
+                  curry leaves.<br />Fry until dal turns golden brown.
+                </p>
+              </div>
+              <div class="instruction-box">
+                <p>
+                  <strong>Combine:</strong><br />Pour tempering over the chutney
+                  and mix well. Adjust consistency with water if needed.
+                </p>
+              </div>
+              <img
+                src="chutney.jpg"
+                class="step-image"
+                alt="Coconut chutney in a bowl with tadka on top"
+              />
+            </div>
+          </div>
+
+          <div class="step-container hidden" id="step-3-container">
+            <h3>Part-III Cooking</h3>
+            <div class="step" id="step-3">
+              <div class="instruction-box">
+                <p>
+                  <strong>Preheat Pan:</strong><br />Heat a non-stick pan or
+                  electric griddle over medium heat. Lightly grease with 1 tsp
+                  oil.
+                </p>
+              </div>
+              <div class="instruction-box">
+                <p>
+                  <strong>Pour Batter:</strong><br />Pour a medium-thick ladle
+                  of batter for fluffy pancakes (or thin for dosa-style crispy).
+                  Spread evenly if needed.
+                </p>
+              </div>
+              <div class="instruction-box">
+                <p>
+                  <strong>Cook First Side:</strong><br />Wait until bubbles
+                  appear and edges lift slightly.
+                </p>
+              </div>
+              <div class="instruction-box">
+                <p>
+                  <strong>Flip Pancakes and Toppings:</strong><br />Carefully
+                  flip and cook the other side until golden-brown. And repeat
+                  the same for other pancakes. Add Toppings - Sprinkle onions,
+                  tomatoes, chillies (optional), coriander, grated carrot, and
+                  capsicum.
+                </p>
+              </div>
+              <img
+                src="cooking_pancake.jpg"
+                class="step-image"
+                alt="Pancake cooking on a non-stick pan"
+              />
+            </div>
+          </div>
+
+          <div class="step-container hidden" id="step-4-container">
+            <h3>Part-IV Plating and Garnishing</h3>
+            <div class="step" id="step-4">
+              <div class="instruction-box">
+                <p>Place all 3 pancakes on a pre-warmed plate.</p>
+              </div>
+              <div class="instruction-box">
+                <p>
+                  Serve with coconut and peanut chutney on the side. Garnish
+                  with fresh cilantro or other herbs/veggies.
+                </p>
+              </div>
+              <h4>Finished Product</h4>
+              <img
+                src="final.jpg"
+                class="step-image"
+                alt="Three finished pancakes served on a plate with chutney"
+              />
+              <p class="final-text">🎉 You're all set! 🎉</p>
+            </div>
+          </div>
+
+          <div class="navigation">
+            <button class="btn btn-secondary" id="prev-btn">
+              &lt;- Previous Step
+            </button>
+            <button class="btn" id="nav-btn">Next Step -&gt;</button>
+          </div>
+        </section>
+
+        <aside class="right-column">
+          <div class="card nutrition-card">
+            <h4>Nutritional Benefits</h4>
+            <div class="chart-wrapper">
+              <div class="chart-title">Nutritional Information (Approx.)</div>
+              <div class="chart-area">
+                <div class="y-axis-title">Grams (g)</div>
+                <div class="y-axis-labels">
+                  <span>50</span><span>40</span><span>30</span><span>20</span
+                  ><span>10</span><span>0</span>
+                </div>
+                <div class="bars-container">
+                  <div class="bar-group">
+                    <div class="bar" style="height: 95%">
+                      <span class="bar-data-label">47.5g</span>
+                    </div>
+                  </div>
+                  <div class="bar-group">
+                    <div class="bar" style="height: 22%">
+                      <span class="bar-data-label">11g</span>
+                    </div>
+                  </div>
+                  <div class="bar-group">
+                    <div class="bar" style="height: 14%">
+                      <span class="bar-data-label">7g</span>
+                    </div>
+                  </div>
+                  <div class="bar-group">
+                    <div class="bar" style="height: 11%">
+                      <span class="bar-data-label">5.5g</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="x-axis-labels-container">
+                <span class="x-axis-label">Carbs</span>
+                <span class="x-axis-label">Protein</span>
+                <span class="x-axis-label">Fats</span>
+                <span class="x-axis-label">Fiber</span>
+              </div>
+              <div class="x-axis-title">Nutrient</div>
+            </div>
+            <table class="nutrition-table">
+              <tr>
+                <th>Nutrient</th>
+                <th>Approximate Amount</th>
+              </tr>
+              <tr>
+                <td>Calories</td>
+                <td>300-350 kcal</td>
+              </tr>
+              <tr>
+                <td>Protein</td>
+                <td>10-12 g</td>
+              </tr>
+              <tr>
+                <td>Fiber</td>
+                <td>5-6 g</td>
+              </tr>
+              <tr>
+                <td>Carbohydrates</td>
+                <td>45-50 g</td>
+              </tr>
+              <tr>
+                <td>Fats</td>
+                <td>6-8 g</td>
+              </tr>
+              <tr>
+                <td>Vitamins & Minerals</td>
+                <td>A, C, K, E, Iron, Magnesium, Manganese</td>
+              </tr>
+            </table>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script>
+      // --- Firebase Config ---
+      const firebaseConfig = {
+        apiKey: "AIzaSyAVA1Q0kk1xFEexc_gcbLB27e1yjjcwtyk",
+        authDomain: "pancake-2ffda.firebaseapp.com",
+        projectId: "pancake-2ffda",
+        storageBucket: "pancake-2ffda.firebasestorage.app",
+        messagingSenderId: "877111104903",
+        appId: "1:877111104903:web:5a87f507c94fdebaa26f22",
+        measurementId: "G-Q1RP1G83ME",
+      };
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth(); // --- Dynamic Login/Logout Button Logic ---
+
+      const userStatusDiv = document.getElementById("user-status");
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          // User is signed in
+          const username =
+            localStorage.getItem("username") || user.email.split("@")[0];
+
+          // 1. Create the welcome message and logout button HTML
+          userStatusDiv.innerHTML = `
+          <button id="logout-button" class="logout-btn">Logout</button>
+          `;
+
+          // 2. THIS IS THE FIX: Find the new button and add the event listener
+          const logoutButton = document.getElementById("logout-button");
+          if (logoutButton) {
+            logoutButton.addEventListener("click", () => {
+              auth
+                .signOut()
+                .then(() => {
+                  localStorage.removeItem("username");
+                  window.location.href = "index.html";
+                })
+                .catch((error) => {
+                  console.error("Logout Error:", error);
+                  alert("Could not log out. Please try again.");
+                });
+            });
+          }
+        } else {
+          // User is signed out, redirect to login page
+          window.location.href = "auth.html";
+        }
+      }); // --- Hamburger Menu Logic ---
+
+      // The old global logout() function is no longer needed
+
+      const menuToggle = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("is-active");
+        navMenu.classList.toggle("is-active");
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
